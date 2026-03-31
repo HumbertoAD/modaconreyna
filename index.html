@@ -1007,22 +1007,15 @@
     const placeholder = document.getElementById('pdfPlaceholder');
 
     if (id && !id.startsWith('TU_ID')) {
-      // PDF configurado — mostrar en iframe
-      placeholder.style.display = 'none';
-      let iframe = document.getElementById('pdfIframe');
-      if (!iframe) {
-        iframe = document.createElement('iframe');
-        iframe.id = 'pdfIframe';
-        iframe.style.cssText = 'width:100%;height:100%;border:none;display:block;';
-        body.appendChild(iframe);
-      }
-      iframe.src = `https://docs.google.com/viewer?srcid=${id}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
-      iframe.style.display = 'block';
+      // Abrir directamente en Google Drive (funciona con PDFs de cualquier tamaño)
+      window.open(`https://drive.google.com/file/d/${id}/view`, '_blank');
+      return;
     } else {
       // Sin PDF aún — mostrar instrucciones
       placeholder.style.display = 'flex';
-      const iframe = document.getElementById('pdfIframe');
-      if (iframe) iframe.style.display = 'none';
+      document.getElementById('modalCatalogo').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      return;
     }
 
     document.getElementById('modalCatalogo').classList.add('active');
