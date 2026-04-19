@@ -9,7 +9,7 @@
   :root {
     --negro:#0d0d0d; --crema:#f5f0e8; --rosa:#d4a5a5;
     --dorado:#b8860b; --gris:#6b6b6b; --blanco:#ffffff; --verde:#25D366;
-    --azul:#2471A3;
+    --azul:#2471A3; --jafra:#8b1a4a;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -56,6 +56,7 @@
   .marca-andrea .bg{background:linear-gradient(145deg,#1a0a0a 0%,#4a1515 40%,#8b2020 100%)}
   .marca-vianey .bg{background:linear-gradient(145deg,#0d0a1a 0%,#2d1560 40%,#5b2d9e 100%)}
   .marca-ilusion .bg{background:linear-gradient(145deg,#0a1a0d 0%,#1a4a25 40%,#2d7a3a 100%)}
+  .marca-jafra .bg{background:linear-gradient(145deg,#1a0a10 0%,#4a0a28 40%,#8b1a4a 100%)}
   .marca-pattern{position:absolute;inset:0;opacity:.07;background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.5) 20px,rgba(255,255,255,.5) 21px)}
   .marca-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:2.5rem 2rem;text-align:center}
   .marca-icon{font-size:3rem;margin-bottom:1.25rem;opacity:.8}
@@ -231,7 +232,7 @@
 
 <!-- HERO -->
 <header>
-  <p class="hero-tag">Catálogos Andrea · Vianey · Ilusión</p>
+  <p class="hero-tag">Catálogos Andrea · Vianey · Ilusión · Jafra</p>
   <h1>Moda con <em>Reyna</em></h1>
   <p class="hero-sub">Encuentra tu estilo. Elige tu talla. Recibe en la puerta de tu casa.</p>
   <div class="hero-cta">
@@ -260,19 +261,29 @@
     <div class="marca-card marca-vianey">
       <div class="bg"></div><div class="marca-pattern"></div>
       <div class="marca-content">
-        <div class="marca-icon">👒</div>
+        <div class="marca-icon">🏠</div>
         <div class="marca-name">Vianey</div>
-        <div class="marca-desc">Zapatos & accesorios</div>
+        <div class="marca-desc">Moda & artículos para el hogar</div>
         <div class="subcats" id="subcats-Vianey"><div class="subcat-loading">Cargando catálogos…</div></div>
       </div>
     </div>
     <div class="marca-card marca-ilusion">
       <div class="bg"></div><div class="marca-pattern"></div>
       <div class="marca-content">
-        <div class="marca-icon">🏃‍♀️</div>
+        <div class="marca-icon">👗</div>
         <div class="marca-name">Ilusión</div>
-        <div class="marca-desc">Ropa deportiva & fitness</div>
+        <div class="marca-desc">Ropa femenina & moda damas</div>
         <div class="subcats" id="subcats-Ilusión"><div class="subcat-loading">Cargando catálogos…</div></div>
+      </div>
+    </div>
+    <!-- ✅ NUEVA TARJETA JAFRA -->
+    <div class="marca-card marca-jafra">
+      <div class="bg"></div><div class="marca-pattern"></div>
+      <div class="marca-content">
+        <div class="marca-icon">🌸</div>
+        <div class="marca-name">Jafra</div>
+        <div class="marca-desc">Perfumería & cosméticos</div>
+        <div class="subcats" id="subcats-Jafra"><div class="subcat-loading">Cargando catálogos…</div></div>
       </div>
     </div>
   </div>
@@ -284,7 +295,7 @@
     <p class="section-label" style="color:var(--rosa)">Simple y rápido</p>
     <h2 class="section-title">¿Cómo hago mi pedido?</h2>
     <div class="pasos">
-      <div class="paso"><div class="paso-num">01</div><div class="paso-icon">📖</div><h3>Hojea el catálogo</h3><p>Explora los catálogos de Andrea, Vianey e Ilusión por damas, caballeros y niños.</p></div>
+      <div class="paso"><div class="paso-num">01</div><div class="paso-icon">📖</div><h3>Hojea el catálogo</h3><p>Explora los catálogos de Andrea, Vianey, Ilusión y Jafra por damas, caballeros y niños.</p></div>
       <div class="paso"><div class="paso-num">02</div><div class="paso-icon">🛒</div><h3>Agrega al pedido</h3><p>Anota la página y el producto. Puedes agregar varios artículos de distintas marcas.</p></div>
       <div class="paso"><div class="paso-num">03</div><div class="paso-icon">💬</div><h3>Envía por WhatsApp</h3><p>Manda todo tu pedido en un solo mensaje directo a Reyna.</p></div>
       <div class="paso"><div class="paso-num">04</div><div class="paso-icon">🚚</div><h3>Recibe en casa</h3><p>Reyna confirma disponibilidad y coordina la entrega a domicilio.</p></div>
@@ -295,7 +306,7 @@
 <!-- FOOTER -->
 <footer>
   <span class="footer-logo">Moda con Reyna</span>
-  <p>Distribuidora oficial de catálogos Andrea, Vianey e Ilusión · Cancún, México</p><br>
+  <p>Distribuidora oficial de catálogos Andrea, Vianey, Ilusión & Jafra · Cancún, México</p><br>
   <a class="footer-wha" href="https://wa.me/529981114451" target="_blank">💬 WhatsApp: (998) 111-4451</a><br>
   <a class="footer-panel-link" href="#" onclick="abrirPanel(event)">🔐 Acceso Reyna</a><br><br>
   <p>© 2026 Moda con Reyna</p>
@@ -339,7 +350,13 @@
     <div class="tab-content active" id="contentAgregar">
       <div class="form-group">
         <label>Marca *</label>
-        <select id="f_marca"><option value="">— Selecciona —</option><option>Andrea</option><option>Vianey</option><option>Ilusión</option></select>
+        <select id="f_marca">
+          <option value="">— Selecciona —</option>
+          <option>Andrea</option>
+          <option>Vianey</option>
+          <option>Ilusión</option>
+          <option>Jafra</option>
+        </select>
       </div>
       <div class="form-group">
         <label>Catálogo *</label>
@@ -432,8 +449,7 @@
 
 <script>
   // ══════════════════════════════════════════════════════════════
-  // CONFIGURACIÓN — Reemplaza con tu URL de Apps Script
-  // Después de hacer el Deploy en Apps Script, pega aquí la URL
+  // CONFIGURACIÓN
   // ══════════════════════════════════════════════════════════════
   const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyMmK4M83S1pl0YXLzI3LK1LH-nntbhf4jw79m3CkMQfeH_euCZSt2au8wMXk073yOhLg/exec";
   const WHA  = "529981114451";
@@ -462,7 +478,6 @@
 
   // ── Cargar catálogos desde Apps Script ─────────────────────────
   async function cargarCatalogos() {
-    // Fallback local mientras se configura Apps Script
     if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === "TU_URL_DE_APPS_SCRIPT_AQUI") {
       usarCatalogosLocales();
       return;
@@ -477,16 +492,30 @@
     } catch(e) { usarCatalogosLocales(); }
   }
 
-  // Catálogos de respaldo (mientras configuras Apps Script)
+  // Catálogos de respaldo (se usan si Apps Script falla)
   function usarCatalogosLocales() {
     catalogos = [
-      { marca:"Vianey",  categoria:"Damas",      nombre:"Catálogo Vianey Damas",      id_drive:"1LPMBrL_IKc2n9VStyZ6lkkRbq6EXHgVY" },
+      // Andrea
+      { marca:"Andrea",  categoria:"Damas",      nombre:"Catálogo Damas Primavera 2026", id_drive:"16m7T8q1NN6yRApr0lE_2IU-R7jNg6V-U" },
+      { marca:"Andrea",  categoria:"Caballeros",  nombre:"Catálogo Caballeros 2026",      id_drive:"1DklkvBQ6p0S8vEIwZQwbzVtAKL1zY4yd" },
+      { marca:"Andrea",  categoria:"Niños",       nombre:"Catálogo Niños 2026",           id_drive:"16DbQ9X70a3wLS-T1HE9r6ZrnFJtPhyvI" },
+      // Vianey
+      { marca:"Vianey",  categoria:"Damas",       nombre:"Vianey 26-27",                  id_drive:"1NHP7J4rWEpK1JlaGsTzOXleCJnMLaPfh" },
+      { marca:"Vianey",  categoria:"Bebé",        nombre:"Catálogo Bebé",                 id_drive:"1SMz_TiTav4fZZI3MWr_T4QWkfjz8H2z3" },
+      { marca:"Vianey",  categoria:"Niños",       nombre:"Chavos",                        id_drive:"1GwNBTko9PQZX0VGMixT9ZgIg4lRlaJKW" },
+      // Ilusión
+      { marca:"Ilusión", categoria:"Damas",       nombre:"Catálogo Ilusión Damas",        id_drive:"1LPMBrL_IKc2n9VStyZ6lkkRbq6EXHgVY" },
+
+      // Jafra ✅
+      { marca:"Jafra",   categoria:"Perfumería",  nombre:"Catálogo Jafra Abril",          id_drive:"1rwtiVsmG7gzlBk9VHZniNOhcCYMVRJx1" },
     ];
     renderCatalogos();
   }
 
+  // ── Renderizar tarjetas de catálogo ────────────────────────────
   function renderCatalogos() {
-    const marcas = ["Andrea","Vianey","Ilusión"];
+    // Ahora incluye Jafra
+    const marcas = ["Andrea","Vianey","Ilusión","Jafra"];
     marcas.forEach(marca => {
       const contenedor = document.getElementById(`subcats-${marca}`);
       if (!contenedor) return;
@@ -500,7 +529,6 @@
           ${iconoCat(c.categoria)} ${c.nombre} <span>→</span>
         </button>`).join("");
     });
-    // Actualizar select del carrito
     actualizarSelectCatalogos();
   }
 
@@ -508,6 +536,8 @@
     if (cat === "Damas")      return "👩";
     if (cat === "Caballeros") return "👨";
     if (cat === "Niños")      return "👧";
+    if (cat === "Bebé")       return "👶";
+    if (cat === "Perfumería") return "🌸";
     return "📄";
   }
 
@@ -622,7 +652,6 @@
     if (!nombre||!tel)       { mostrarToast("⚠️ Ingresa tu nombre y WhatsApp"); return; }
     if (carrito.length===0)  { mostrarToast("⚠️ Tu pedido está vacío"); return; }
 
-    // Guardar en Sheets si está configurado
     if (APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "TU_URL_DE_APPS_SCRIPT_AQUI") {
       try {
         await fetch(APPS_SCRIPT_URL, {
@@ -630,10 +659,9 @@
           headers:{"Content-Type":"application/json"},
           body: JSON.stringify({ action:"nuevo_pedido", nombre, tel, items: carrito })
         });
-      } catch(e) { /* continúa aunque falle */ }
+      } catch(e) {}
     }
 
-    // WhatsApp
     const fecha = new Date().toLocaleDateString("es-MX",{day:"2-digit",month:"long",year:"numeric"});
     let msg = `🛍️ *PEDIDO — Moda con Reyna*\n📅 ${fecha}\n\n`;
     msg += `👤 *Cliente:* ${nombre}\n📱 *WhatsApp:* ${tel}\n\n`;
@@ -708,8 +736,8 @@
         marca:"Vianey", catalogo:"Damas", pagina:"23", codigo:"88151",
         descripcion:"Chamarra verde Q79 talla M", estado:"Nuevo", notas:"" },
       { row:4, id:"PED-002", fecha:"2026-04-01", hora:"11:45", cliente:"Sofía Ramírez", tel:"9987654321",
-        marca:"Andrea", catalogo:"Damas", pagina:"15", codigo:"",
-        descripcion:"Sandalia beige talla 24", estado:"En proceso", notas:"Confirmada disponibilidad" },
+        marca:"Jafra", catalogo:"Perfumería", pagina:"15", codigo:"",
+        descripcion:"Perfume Gardenia Rosa 50ml", estado:"En proceso", notas:"Confirmada disponibilidad" },
     ];
     renderPedidos();
     mostrarToast("⚠️ Modo demo — configura Apps Script para ver pedidos reales");
@@ -719,7 +747,6 @@
     filtro = filtro || filtroActual;
     const data = filtro === "Todos" ? pedidosData : pedidosData.filter(p => p.estado === filtro);
 
-    // Stats
     document.getElementById("statTotal").textContent     = pedidosData.length;
     document.getElementById("statNuevo").textContent     = pedidosData.filter(p=>p.estado==="Nuevo").length;
     document.getElementById("statProceso").textContent   = pedidosData.filter(p=>p.estado==="En proceso").length;
